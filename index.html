@@ -20,19 +20,28 @@
   </head>
   <body>
     <div class="container">
+      <div class="weather-app-wrapper"></div>
       <div class="weather-app">
-        <h1>New York</h1>
-        <ul>
-          <li>Thursday 19:25</li>
-          <li>Partly Cloudy</li>
-        </ul>
+        <div class="overview">
+          <h1>New York</h1>
+          <ul>
+            <li>Thursday 19:25</li>
+            <li>Partly Cloudy</li>
+          </ul>
+        </div>
         <div class="row">
           <div class="col-6">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-              alt="Partly cloudy image"
-            />
-            12°C | °F
+            <div class="clearfix weather-temperature">
+               <img
+               src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+               alt="Partly cloudy image"
+               class="float-left"
+               />
+               <span class="float-left">
+                <strong>12</strong><span class="units">°C | <a href=""> °F</a>
+                </span>
+              </span>
+            </div>
           </div>
           <div class="col-6">
             <ul>
@@ -42,15 +51,16 @@
             </ul>
           </div>
         </div>
+      </div>
         <small
           ><a
             href="https://github.com/KovalVS/Weather-app-workshop"
             target="_blank"
             >Open source code,</a
           >
-          by Volodymyr Koval</small
-        >
-      </div>
+          by Volodymyr Koval
+          </small>
+        </div>
     </div>
     <script src="src/app.js"></script>
   </body>
