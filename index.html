@@ -15,6 +15,7 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>🌏 Weather app</title>
   </head>
@@ -23,44 +24,42 @@
       <div class="weather-app-wrapper"></div>
       <div class="weather-app">
         <div class="overview">
-          <h1>New York</h1>
+          <h1 id="city"></h1>
           <ul>
             <li>Thursday 19:25</li>
-            <li>Partly Cloudy</li>
+            <li id="description"></li>
           </ul>
         </div>
         <div class="row">
           <div class="col-6">
             <div class="clearfix weather-temperature">
-               <img
-               src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-               alt="Partly cloudy image"
-               class="float-left"
-               />
-               <span class="float-left">
-                <strong>12</strong><span class="units">°C | <a href=""> °F</a>
-                </span>
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="Partly cloudy image"
+                class="float-left"
+              />
+              <span class="float-left">
+                <strong id="temperature"></strong
+                ><span class="units">°C | <a href=""> °F</a> </span>
               </span>
             </div>
           </div>
           <div class="col-6">
             <ul>
-              <li>Precipitation: 0%</li>
-              <li>Humidity: 73%</li>
-              <li>Wind: 2 km/h</li>
+              <li>Humidity: <span id="humidity"></span> %</li>
+              <li>Wind: <span id="wind"></span> km/h</li>
             </ul>
           </div>
         </div>
       </div>
-        <small
-          ><a
-            href="https://github.com/KovalVS/Weather-app-workshop"
-            target="_blank"
-            >Open source code,</a
-          >
-          by Volodymyr Koval
-          </small>
-        </div>
+      <small
+        ><a
+          href="https://github.com/KovalVS/Weather-app-workshop"
+          target="_blank"
+          >Open source code,</a
+        >
+        by Volodymyr Koval
+      </small>
     </div>
     <script src="src/app.js"></script>
   </body>
