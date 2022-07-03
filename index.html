@@ -16,6 +16,12 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/style.css" />
     <title>🌏 Weather app</title>
   </head>
@@ -25,60 +31,55 @@
       <div class="weather-app">
         <form id="search-form" class="mb-3">
           <div class="row">
-            <div class="col-10">
+            <div class="col-8">
           <input 
             type="search" 
             placeholder="Type a city" 
-            class="form-control"
+            class="form-control shadow-sm"
             id="city-input"
             autocomplete="off"
             />
             </div>
-            <div class="col-2">
+            <div class="col-4">
           <input 
             type="submit" 
             value="Search" 
-            class="btn btn-primary w-100"
+            class="btn btn-primary w-100 shadow-sm"
             />
-            </div>
+          </div>
         </form>
           </div>
         <div class="overview">
           <h1 id="city"></h1>
           <ul>
-            <li>Last updated: <span id="date"></span></li>
+            <li><span id="date"></span></li>
             <li id="description"></li>
           </ul>
         </div>
-        <div class="row">
-          <div class="col-6">
+        
+          <div class="d-flex justify-content-center">
             <div class="clearfix weather-temperature">
               <img src="" alt="" class="float-left" id="icon" />
-              <span class="float-left">
-                <strong id="temperature"></strong
+                <b id="temperature"></b
                 ><span class="units">°C</span>
-              </span>
+              </span> <br />
+              <div class="d-flex justify-content-center">
+                <span>💧 <span id="humidity"></span> % |</span>
+                <span>💨 <span id="wind"></span> km/h</span>
+              </div>
             </div>
           </div>
-          <div class="col-6">
-            <ul>
-              <li>Humidity: <span id="humidity"></span> %</li>
-              <li>Wind: <span id="wind"></span> km/h</li>
-            </ul>
-          </div>
-        </div>
+        
         <div class="weather-forecast" id="forecast">
           
         </div>
       </div>
-      <small>
-        <a
-          href="https://github.com/KovalVS/Weather-app-workshop"
-          target="_blank"
-          >Open source code,</a
-        >
-        by Volodymyr Koval
-      </small>
+      <div class="author">
+        Coded by Volodymyr Koval <br />
+        <a target="blank" href="https://github.com/KovalVS">
+          Visit my GitHub
+        </a>
+      </div>
     </div>
     <script src="src/app.js"></script>
   </body>
